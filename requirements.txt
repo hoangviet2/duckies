@@ -1,5 +1,5 @@
 --find-links https://download.pytorch.org/whl/torch_stable.html
-torch==2.0.1,
+torch==2.0.0+cpu,
 transformers==4.29.2,
 sense2vec==2.0.2,
 strsim==0.0.3,
