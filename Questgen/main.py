@@ -22,8 +22,6 @@ import time
 class QGen:
     
     def __init__(self):
-        
-        
         self.tokenizer = T5Tokenizer.from_pretrained('t5-base')
         model = T5ForConditionalGeneration.from_pretrained('Parth/result')
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -180,8 +178,9 @@ class QGen:
         return output
 
 
+
 class BoolQGen:
-       
+
     def __init__(self):
         self.tokenizer = T5Tokenizer.from_pretrained('t5-base')
         model = T5ForConditionalGeneration.from_pretrained('ramsrigouthamg/t5_boolean_questions')
@@ -191,7 +190,7 @@ class BoolQGen:
         self.device = device
         self.model = model
         self.set_seed(42)
-        
+
     def set_seed(self,seed):
         numpy.random.seed(seed)
         torch.manual_seed(seed)
@@ -201,7 +200,7 @@ class BoolQGen:
     def random_choice(self):
         a = random.choice([0,1])
         return bool(a)
-    
+
 
     def predict_boolq(self,payload):
         start = time.time()
@@ -224,14 +223,14 @@ class BoolQGen:
         output = beam_search_decoding (input_ids, attention_masks,self.model,self.tokenizer)
         if torch.device=='cuda':
             torch.cuda.empty_cache()
-        
+
         final= {}
         final['Text']= text
         final['Count']= num
         final['Boolean Questions']= output
-            
+
         return final
-            
+
 class AnswerPredictor:
           
     def __init__(self):
