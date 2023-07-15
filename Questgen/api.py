@@ -13,8 +13,24 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 qg = main.QGen()
-@app.route("/")
+@app.route("/", methods=["POST"])
 def hello():
+    if qg:
+        try:
+            print(type(request))
+            print(request.json)
+            jsondata = request.json
+            if len(jsondata["input_text"]) == 0:
+                return jsonify({'error': "Find 0 character in the input"})
+            print(type(jsondata))
+            prediction = qg.predict_mcq(jsondata)
+            package = json.dumps(prediction)
+            return package
+        except:
+            return jsonify({'trace': traceback.format_exc()})
+    else:
+        print('Train the model first')
+        return jsonify({'error': "find a model"})
     return "Welcome to machine learning model APIs!"
 
 @app.route("/predict", methods=["POST"])
