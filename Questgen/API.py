@@ -38,9 +38,9 @@ def predict():
         return jsonify({'error': "find a model"})
 
 
-if __name__ == '__main__':
-    #port = 12345
-    print('Model columns loaded')
-    #app.run(port=port,debug=True)
-    app.run(debug=True)
+# if __name__ == '__main__':
+#     #port = 12345
+#     print('Model columns loaded')
+#     #app.run(port=port,debug=True)
+#     app.run(debug=True)
 
