@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify,Blueprint
 import traceback
 import pandas as pd
 import numpy as np
@@ -10,14 +10,15 @@ from Questgen import main
 import os
 import json
 from flask_cors import CORS
-app = Flask(__name__)
+#app = Flask(__name__)
+app = Blueprint('main', __name__)
 CORS(app)
 qg = main.QGen()
-@app.route("/")
+@app.route('/')
 def hello():
     return "Welcome to machine learning model APIs!"
 
-@app.route("/predict", methods=["POST"])
+@app.route('/predict', methods=["POST"])
 def predict():
 
     if qg:
@@ -38,9 +39,9 @@ def predict():
         return jsonify({'error': "find a model"})
 
 
-if __name__ == '__main__':
-    #port = 12345
-    print('Model columns loaded')
-    #app.run(port=port,debug=True)
-    app.run()
+# if __name__ == '__main__':
+#     #port = 12345
+#     print('Model columns loaded')
+#     #app.run(port=port,debug=True)
+#     app.run()
 
