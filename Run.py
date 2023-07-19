@@ -1,5 +1,2 @@
-from API import app
-def create():
-    return app
-
-main = create()
+from APIs import createApp
+app = createApp()

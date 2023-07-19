@@ -1,21 +1,13 @@
 from flask import Flask, request, jsonify
 import traceback
-import nltk
-nltk.download('stopwords')
-from Questgen import main
 import json
-from flask_cors import CORS
-#app = Blueprint('main', __name__)
-CORS(app)
-qg = main.QGen()
-#app = Flask(__name__)
+from model import qg
 @app.route('/')
 def hello():
     return "Welcome to machine learning model APIs!"
 
 @app.route('/predict', methods=["POST"])
 def predict():
-
     if qg:
         try:
             print(type(request))
@@ -32,11 +24,3 @@ def predict():
     else:
         print('Train the model first')
         return jsonify({'error': "find a model"})
-
-app = Flask(__name__)
-if __name__ == '__main__':
-#     #port = 12345
-#     #app.run(port=port,debug=True)
-    print('Model columns loaded')
-    app.run()
-
