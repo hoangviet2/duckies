@@ -10,10 +10,10 @@ from Questgen import main
 import os
 import json
 from flask_cors import CORS
-#app = Flask(__name__)
-app = Blueprint('main', __name__)
+#app = Blueprint('main', __name__)
 CORS(app)
 qg = main.QGen()
+app = Flask(__name__)
 @app.route('/')
 def hello():
     return "Welcome to machine learning model APIs!"
