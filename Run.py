@@ -1,3 +1,5 @@
-from Questgen import create
+from API import app
+def create():
+    return app
 
-app = create()
+main = create()

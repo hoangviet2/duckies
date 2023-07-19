@@ -1,13 +1,8 @@
-from flask import Flask, request, jsonify,Blueprint
+from flask import Flask, request, jsonify
 import traceback
-import pandas as pd
-import numpy as np
-import time
 import nltk
 nltk.download('stopwords')
-from pprint import pprint
 from Questgen import main
-import os
 import json
 from flask_cors import CORS
 #app = Blueprint('main', __name__)
