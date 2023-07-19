@@ -5,11 +5,6 @@
 .idea/modules.xml
 .idea/other.xml
 .idea/vcs.xml
-Questgen/s2v_old/cfg
-Questgen/s2v_old/freqs.json
-Questgen/s2v_old/key2row
-Questgen/s2v_old/strings.json
-Questgen/s2v_old/vectors
 s2v_reddit_2015_md.tar.gz
 UNKNOWN.egg-info/dependency_links.txt
 UNKNOWN.egg-info/PKG-INFO
@@ -567,3 +562,4 @@ Questgen/source/lib/python3.9/site-packages/setuptools/version.py
 Questgen/source/lib/python3.9/site-packages/setuptools/wheel.py
 Questgen/source/lib/python3.9/site-packages/setuptools/windows_support.py
 Questgen/source/pyvenv.cfg
+Questgen/s2v_old/vectors
