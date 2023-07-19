@@ -13,7 +13,7 @@ from flask_cors import CORS
 #app = Blueprint('main', __name__)
 CORS(app)
 qg = main.QGen()
-app = Flask(__name__)
+#app = Flask(__name__)
 @app.route('/')
 def hello():
     return "Welcome to machine learning model APIs!"
@@ -38,7 +38,7 @@ def predict():
         print('Train the model first')
         return jsonify({'error': "find a model"})
 
-
+app = Flask(__name__)
 if __name__ == '__main__':
 #     #port = 12345
 #     #app.run(port=port,debug=True)
