@@ -10,4 +10,3 @@ def run():
     my_tar.close()
     print(filename)
     print("HI")
-run()
