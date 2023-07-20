@@ -1,9 +1,8 @@
-from flask import Flask, request, jsonify
+from flask import Flask,Blueprint, request, jsonify
 import traceback
 import json
 from model import qg
-from clone import run
-run()
+app = Blueprint('main', __name__)
 @app.route('/')
 def hello():
     return "Welcome to machine learning model APIs!"
