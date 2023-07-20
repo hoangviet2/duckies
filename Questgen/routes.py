@@ -1,11 +1,18 @@
-from flask import Flask,Blueprint, request, jsonify
+from flask import Flask, Blueprint, request, jsonify
+from clone import run
+run()
 import traceback
 import json
 from model import qg
-app = Blueprint('main', __name__)
+from flask import Flask
+from flask_cors import CORS
+app = Flask(__name__)
+CORS(app)
+
 @app.route('/')
 def hello():
     return "Welcome to machine learning model APIs!"
+
 
 @app.route('/predict', methods=["POST"])
 def predict():
@@ -25,3 +32,7 @@ def predict():
     else:
         print('Train the model first')
         return jsonify({'error': "find a model"})
+
+
+if __name__ == '__main__':
+    app.run(debug=True)

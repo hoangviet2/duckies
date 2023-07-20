@@ -9,3 +9,5 @@ def run():
 # closing the file object
     my_tar.close()
     print(filename)
+    print("HI")
+run()
