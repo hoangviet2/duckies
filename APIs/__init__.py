@@ -6,6 +6,6 @@ from Questgen import clone
 def createApp():
 
     clone.run()
-    app = Flask(__name__)
-    CORS(app)
-    return app
+    #app = Flask(__name__)
+    #CORS(app)
+    #return app
