@@ -3,7 +3,7 @@ from clone import run
 run()
 import nltk
 nltk.download('stopwords')
-from Questgen import main
+import main
 import traceback
 import json
 from flask import Flask
