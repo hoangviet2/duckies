@@ -1,8 +1,9 @@
 from flask import Flask, Blueprint, request, jsonify
 from clone import run
 run()
-# import nltk
-# nltk.download('stopwords')
+import nltk
+nltk.download('stopwords')
+nltk.download('universal_tagset')
 from model import getModel
 import traceback
 import json
