@@ -1,18 +1,18 @@
 from flask import Flask, Blueprint, request, jsonify
-from clone import run
-run()
+from Questgen import clone
+clone.run()
 import en_core_web_sm
 nlp = en_core_web_sm.load()
 # import nltk
 # nltk.download('stopwords')
-from model import getModel
+from Questgen import model
 import traceback
 import json
 from flask import Flask
 from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
-qg = getModel()
+qg = model.getModel()
 
 @app.route('/')
 def hello():
