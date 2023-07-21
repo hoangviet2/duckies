@@ -12,12 +12,18 @@ nltk.download('popular')
 from nltk.corpus import brown
 #from similarity.normalized_levenshtein import NormalizedLevenshtein
 from strsimpy.normalized_levenshtein import NormalizedLevenshtein
-from Questgen.encoding.encoding import beam_search_decoding
-from Questgen.mcq.mcq import tokenize_sentences
-from Questgen.mcq.mcq import get_keywords
-from Questgen.mcq.mcq import get_sentences_for_keyword
-from Questgen.mcq.mcq import generate_questions_mcq
-from Questgen.mcq.mcq import generate_normal_questions
+# from Questgen.encoding.encoding import beam_search_decoding
+# from Questgen.mcq.mcq import tokenize_sentences
+# from Questgen.mcq.mcq import get_keywords
+# from Questgen.mcq.mcq import get_sentences_for_keyword
+# from Questgen.mcq.mcq import generate_questions_mcq
+# from Questgen.mcq.mcq import generate_normal_questions
+from encoding.encoding import beam_search_decoding
+from mcq.mcq import tokenize_sentences
+from mcq.mcq import get_keywords
+from mcq.mcq import get_sentences_for_keyword
+from mcq.mcq import generate_questions_mcq
+from mcq.mcq import generate_normal_questions
 import time
 
 
