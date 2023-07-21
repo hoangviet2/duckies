@@ -4,7 +4,7 @@ run()
 import nltk
 nltk.download('stopwords')
 nltk.download('universal_tagset')
-from Questgen import main
+import main
 
 import traceback
 import json
