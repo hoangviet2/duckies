@@ -1,6 +1,8 @@
 from flask import Flask, Blueprint, request, jsonify
 from clone import run
 run()
+import en_core_web_sm
+nlp = en_core_web_sm.load()
 # import nltk
 # nltk.download('stopwords')
 from model import getModel

@@ -6,7 +6,7 @@ from sense2vec import Sense2Vec
 import nltk
 import numpy
 from nltk import FreqDist
-
+nltk.download('universal_tagset')
 nltk.download('brown')
 nltk.download('stopwords')
 nltk.download('popular')
