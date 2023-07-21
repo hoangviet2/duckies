@@ -10,7 +10,8 @@ nltk.download('brown')
 nltk.download('stopwords')
 nltk.download('popular')
 from nltk.corpus import brown
-from similarity.normalized_levenshtein import NormalizedLevenshtein
+#from similarity.normalized_levenshtein import NormalizedLevenshtein
+from strsimpy.normalized_levenshtein import NormalizedLevenshtein
 from Questgen.encoding.encoding import beam_search_decoding
 from Questgen.mcq.mcq import tokenize_sentences
 from Questgen.mcq.mcq import get_keywords
