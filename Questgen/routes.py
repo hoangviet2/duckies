@@ -4,14 +4,15 @@ run()
 import nltk
 nltk.download('stopwords')
 nltk.download('universal_tagset')
-from model import getModel
+from Questgen import main
+
 import traceback
 import json
 from flask import Flask
 from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
-qg = getModel()
+qg = main.QGen()
 
 @app.route('/')
 def hello():
@@ -39,4 +40,4 @@ def predict():
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5000)
+    app.run(host="0.0.0.0", port=1234)
